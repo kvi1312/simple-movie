@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+@layer base {
+  body {
+    @apply bg-slate-900 font-body;
+  }
+}
+
+@layer components {
+  .page-container {
+    max-width: 800px;
+    @apply mx-auto;
+  }
+  .page-container-fluid {
+    max-width: 1440px;
+  }
+}
