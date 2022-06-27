@@ -1,0 +1,13 @@
+import React from "react";
+
+const NotFound = () => {
+  return (
+    <>
+      <h1 className="flex items-center flex-col">
+       
+      </h1>
+    </>
+  );
+};
+
+export default NotFound;

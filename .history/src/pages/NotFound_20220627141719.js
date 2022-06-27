@@ -1,0 +1,16 @@
+import React from "react";
+
+const NotFound = () => {
+  return (
+    <div className="flex flex-col items-center h-[400px] justify-center">
+      <h1 className="flex items-center flex-col text-9xl text-red-400">404</h1>
+      <span className="text-center text-6xl">
+        Ooops...
+        <br />
+        Page Not Found
+      </span>
+    </div>
+  );
+};
+
+export default NotFound;

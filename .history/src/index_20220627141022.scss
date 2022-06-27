@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+@layer base {
+  body {
+    @apply bg-slate-900 font-body text-white;
+  }
+}
+
+@layer components {
+  .page-container {
+    max-width: 1280px;
+    @apply mx-auto;
+  }
+  .movie-list .swiper-slide {
+    width: 300px !important;
+    height: auto;
+  }
+  .banner .swiper {
+    height: 100%;
+  }
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  .selected {
+    @apply text-primary;
+  }
+}
+
+.skeleton {
+  background-color: #eee;
+  background-image: linear-gradient(
+    110deg,
+    #ececec 8%,
+    #f5f5f5 18%,
+    #ececec 33%
+  );
+  background-size: 200% 100%;
+  animation: 1.5s shine linear infinite;
+}
+@keyframes shine {
+  to {
+    background-position-x: 200%;
+  }
+}
+
+
+
+div {
+  width: 100%;
+  text-align: $c;
+}
+
+.number {
+  background: #fff;
+  position: $rl;
+  font: 900 30vmin "Consolas";
+  letter-spacing: 5vmin;
+  text-shadow: multiple-shadow(8);
+  @include _pseudo-uncomplete($bf, $bl) {
+    background-color: #673ab7;
+    background-image: radial-gradient(
+        closest-side at 50% 50%,
+        #ffc107 100%,
+        rgba(0, 0, 0, 0)
+      ),
+      radial-gradient(closest-side at 50% 50%, #e91e63 100%, rgba(0, 0, 0, 0));
+    background-repeat: $rpx;
+    background-size: 40vmin 40vmin;
+    background-position: -100vmin 20vmin, 100vmin -25vmin;
+    @include _dimension(100%);
+    mix-blend-mode: screen;
+    @include _animation(moving, 10s linear infinite both, to) {
+      background-position: 100vmin 20vmin, -100vmin -25vmin;
+    }
+  }
+}
+
+.text {
+  @include _text($n, 400 5vmin "Courgette", $n);
+  span {
+    font-size: 10vmin;
+  }
+}
