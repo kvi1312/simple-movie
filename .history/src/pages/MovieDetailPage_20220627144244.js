@@ -9,7 +9,7 @@ const MovieDetailPage = () => {
   const { movieId } = useParams();
   const { data } = useSWR(tmdbAPI.getMovieDetail(movieId), fetcher);
   if (!data) return null;
-  console.log(data);
+  clg
   const { backdrop_path, poster_path, title, genres, overview } = data;
   return (
     <div className="py-10">
@@ -36,7 +36,7 @@ const MovieDetailPage = () => {
       </h1>
 
       {genres.length > 0 && (
-        <div className="flex items-center gap-x-5 mb-10 justify-center">
+        <div className="flegx items-center gap-x-5 mb-10 justify-center">
           {genres.map((item) => (
             <span
               className="py-2 px-4 border-primary text-white border rounded-lg "

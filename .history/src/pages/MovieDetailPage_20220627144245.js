@@ -36,7 +36,7 @@ const MovieDetailPage = () => {
       </h1>
 
       {genres.length > 0 && (
-        <div className="flex items-center gap-x-5 mb-10 justify-center">
+        <div className="flegx items-center gap-x-5 mb-10 justify-center">
           {genres.map((item) => (
             <span
               className="py-2 px-4 border-primary text-white border rounded-lg "
